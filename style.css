@@ -1,36 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital@0;1&display=swap");
 
+/* Et footer oleks lehe all ka siis kui contenti kõrgus ei ole vh-st suurem */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+
 .gallery-image img {
   width: 100%;
 }
 
 header .header-banner {
   width: 100%;
-  height: calc(100vh - 450px);
   display: table;
 }
 
 header .logo {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
   text-align: center;
   padding: 10px 0 20px 0;
 }
 
 header .header-bg {
-  height: calc(100vh - 450px);
+  height: 20vh;
   width: 100%;
-  position: absolute;
-  z-index: -1;
   background-image: url("assets/header.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  /* Tausta hägustus */
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  
 }
 
 header h1 {
@@ -38,10 +40,10 @@ header h1 {
   font-weight: 700;
   font-style: italic;
   font-size: 60px;
-  color: #ffffff;
+  color: #000000;
   line-height: 70px;
   text-transform: uppercase;
-  text-shadow: 3px 3px 8px #000000;
+  text-shadow: 3px 3px 8px #dddcdc;
 }
 
 header h2 {
@@ -49,9 +51,8 @@ header h2 {
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 5px;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
-  text-shadow: 2px 2px 3px #000000;
 }
 
 hr {
@@ -68,6 +69,7 @@ header nav ul {
   display: block;
   margin: 0 auto;
   text-align: center; /*IE*/
+  margin-bottom: 20px;
   width: fit-content;
 }
 
@@ -104,7 +106,7 @@ nav ul li a {
   width: calc(100% - 40px);
   margin: auto;
   line-height: 1.5em;
-  text-align:justify;
+  text-align: justify;
 }
 
 .about-picture {
@@ -125,8 +127,6 @@ nav ul li a {
 }
 
 .kitchen-header {
-  visibility: hidden;
-  opacity: 0;
 
   /* Kujundus */
   display: block;
@@ -154,14 +154,15 @@ nav ul li a {
 }
 
 .gallery-image,
+.gallery-image .container,
 .gallery-image img {
   max-width: 300px;
   aspect-ratio: 1;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .gallery-image img {
@@ -203,6 +204,8 @@ footer {
   background-color: #4c5d6e;
   margin-top: 20px;
   overflow: hidden;
+  position: relative;
+  bottom: 0;
 }
 
 .disclaimer {
@@ -259,8 +262,8 @@ footer ul li a {
 }
 
 @media only screen and (min-width: 950px) {
-  header .header-banner {
-    height: calc(100vh - 400px);
+  header .header-bg {
+    height: 40vh;
   }
 
   header h1 a {
@@ -295,6 +298,12 @@ footer ul li a {
     visibility: visible;
     width: 400px;
     height: auto;
+  }
+
+  /* väiksematel (puutetundlikel) ekraanidel kuvab teksti kogu aeg, muidu on peidus */
+  .kitchen-header {
+    visibility: hidden;
+    opacity: 0;
   }
 
   .disclaimer {
