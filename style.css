@@ -23,11 +23,14 @@ header .header-bg {
   position: absolute;
   z-index: -1;
   background-image: url("assets/header.png");
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  /* Tausta hägustus */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
 }
 
 header h1 {
@@ -101,6 +104,7 @@ nav ul li a {
   width: calc(100% - 40px);
   margin: auto;
   line-height: 1.5em;
+  text-align:justify;
 }
 
 .about-picture {
@@ -154,10 +158,10 @@ nav ul li a {
   max-width: 300px;
   aspect-ratio: 1;
   border-radius: 100%;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 
 .gallery-image img {
