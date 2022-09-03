@@ -5,12 +5,8 @@
 }
 
 header .header-banner {
-  background-image: url("assets/header.png");
   width: 100%;
-  height: calc(100vh - 500px);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: calc(100vh - 450px);
   display: table;
 }
 
@@ -21,6 +17,19 @@ header .logo {
   padding: 10px 0 20px 0;
 }
 
+header .header-bg {
+  height: calc(100vh - 450px);
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-image: url("assets/header.png");
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 header h1 {
   font-family: "Gentium Book Basic", serif;
   font-weight: 700;
@@ -29,16 +38,27 @@ header h1 {
   color: #ffffff;
   line-height: 70px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 8px #000000;
+  text-shadow: 3px 3px 8px #000000;
 }
 
 header h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 5px;
   color: #ffffff;
   text-transform: uppercase;
+  text-shadow: 2px 2px 3px #000000;
+}
+
+hr {
+  background-color: #60656e;
+  border: none;
+  height: 2px;
+  box-shadow: #60656e;
+  width: 40%;
+  margin: 20px auto;
+  margin-bottom: 5px;
 }
 
 header nav ul {
@@ -63,23 +83,31 @@ nav ul li a {
   text-decoration: none;
 }
 
-hr {
-  color: #4f5663;
-  border-width: 2px;
-  width: 30%;
-  margin: 0 auto;
-  margin-bottom: 5px;
-}
-
 .gallery-h2 {
   font-family: "Gentium Book Basic", sans-serif;
   font-weight: 600;
   font-size: 28px;
   letter-spacing: 2px;
+  margin: 30px 0;
   padding: 10px;
   color: #3a383d;
   text-transform: uppercase;
   text-align: center;
+}
+
+.about-info {
+  font-family: "Open Sans", sans-serif;
+  padding: 20px;
+  width: calc(100% - 40px);
+  margin: auto;
+  line-height: 1.5em;
+}
+
+.about-picture {
+  display: none;
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
 
 .gallery-image {
@@ -92,9 +120,12 @@ hr {
   flex-basis: 300px;
 }
 
-.post-header {
-  /*kujundus*/
+.kitchen-header {
+  visibility: hidden;
+  opacity: 0;
 
+  /* Kujundus */
+  display: block;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 22px;
@@ -104,12 +135,50 @@ hr {
   text-transform: uppercase;
   text-shadow: 3px 3px 9px #111111;
 
-  /*positsioneerimine*/
-
+  /* Positsioneerimine */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  /* Animatsioon */
+  transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+}
+
+.gallery-image,
+.gallery-image img {
+  max-width: 300px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+.gallery-image img {
+  object-fit: cover;
+
+  /* Animatsioon */
+  transition: filter 0.6s;
+  -webkit-transition: filter 0.6s;
+  -moz-transition: filter 0.6s;
+  -ms-transition: filter 0.6s;
+  -o-transition: filter 0.6s;
+}
+
+.gallery-image:hover img {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.gallery-image:hover .kitchen-header {
+  visibility: visible;
+  opacity: 1;
 }
 
 .gallery-links {
@@ -127,7 +196,7 @@ hr {
 footer {
   width: calc(100% - 80px);
   padding: 40px;
-  background-color: #172029;
+  background-color: #4c5d6e;
   margin-top: 20px;
   overflow: hidden;
 }
@@ -147,7 +216,8 @@ footer ul li {
   padding: 0 0 10px 0;
 }
 
-footer ul li p {
+footer ul li p,
+footer ul li span {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 18px;
@@ -167,8 +237,21 @@ footer ul li a {
 }
 
 .footer-sm {
-  width: 32px;
-  float: right;
+  display: block;
+  width: 100px;
+}
+
+.footer-sm a {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 450px) {
+  .footer-sm {
+    width: 32px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: auto;
+  }
 }
 
 @media only screen and (min-width: 950px) {
@@ -189,6 +272,27 @@ footer ul li a {
     padding: 16px 42px;
   }
 
+  .about-info {
+    width: 450px;
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+
+  .about-picture,
+  .about-picture img {
+    display: flex;
+    visibility: visible;
+    width: 400px;
+    height: auto;
+  }
+
   .disclaimer {
     display: block;
     font-family: "Open Sans", sans-serif;
@@ -199,7 +303,7 @@ footer ul li a {
     color: #ffffff;
     text-transform: uppercase;
     float: left;
-    margin: 0 80px;
+    margin-left: 40px;
   }
 
   .disclaimer span {

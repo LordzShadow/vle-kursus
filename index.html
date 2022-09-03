@@ -2,95 +2,101 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Terves maailmas pole ägedamat reisiblogi: jälgi minu seiklusi seitsmel kontinendil!"
-    />
+    <meta name="description" content="Eesti maitsvaim retseptiveeb" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>FOLLOW ME | Reisiblogi</title>
+    <title>Cookbook</title>
 
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
+      <div class="header-bg"></div>
       <section class="header-banner">
         <div class="logo">
-          <h1>Follow me</h1>
-          <h2>Reisiblogi</h2>
+          <h1>Cookbook</h1>
+          <h2>Eesti maitsvaim retseptiveeb</h2>
+          <hr />
         </div>
       </section>
 
       <nav>
         <ul>
-          <li><a href="#">Kodu</a></li>
-          <li><a href="#">Reisilood</a></li>
-          <li><a href="#">Nippe</a></li>
+          <li><a href="#recipes">Retseptid</a></li>
+          <li><a href="#contact">Võta ühendust</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <div class="index-header">
-        <hr />
-
-        <h2 class="gallery-h2">Populaarsemad</h2>
+        <h2 class="gallery-h2" id="retseptid">Meist</h2>
+      </div>
+      <div class="about">
+        <section class="about-info">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+            praesentium, commodi tempore dolor ad dolores odit nobis eaque optio
+            rem odio magnam impedit voluptatem voluptatum, error qui officia
+            porro libero. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Repellat dignissimos nobis inventore eum consequatur natus,
+            eius nihil illum asperiores tenetur sunt laudantium dolore similique
+            in fugiat, nemo cum consectetur harum!
+          </p>
+        </section>
+        <section class="about-picture">
+          <img src="assets/chefs.png" alt="Meie kokad" />
+        </section>
+      </div>
+      <div class="index-header">
+        <h2 class="gallery-h2" id="recipes">Retseptid</h2>
       </div>
 
       <section class="gallery-links">
-        <a href="#" class="gallery-image">
+        <a class="gallery-image">
           <div class="container">
-            <img src="assets/lijiang.png" alt="lijang" />
-            <p class="post-header">Lijiang, Hiina</p>
+            <img src="assets/estonia.png" alt="Eesti köök" />
+            <p class="kitchen-header">Eesti köök</p>
           </div>
         </a>
 
-        <a href="#" class="gallery-image">
+        <a class="gallery-image">
           <div class="container">
-            <img src="assets/shanghai.jpg" alt="shanghai" />
-            <p class="post-header">Shanghai, Hiina</p>
+            <img src="assets/asia.png" alt="Aasia köök" />
+            <p class="kitchen-header">Aasia köök</p>
           </div>
         </a>
 
-        <a href="#" class="gallery-image">
+        <a class="gallery-image">
           <div class="container">
-            <img src="assets/morocco.png" alt="morocco" />
-            <p class="post-header">Morocco</p>
-          </div>
-        </a>
-
-        <a href="#" class="gallery-image">
-          <div class="container">
-            <img src="assets/moskow.jpg" alt="moskva" />
-            <p class="post-header">Moskva, Venemaa</p>
+            <img src="assets/italy.png" alt="Itaalia köök" />
+            <p class="kitchen-header">Itaalia köök</p>
           </div>
         </a>
       </section>
     </main>
 
     <footer>
-      <ul class="footer-links">
-        <li><p>Viimased postitused:</p></li>
-        <li><a href="#">Shanghai, Hiina</a></li>
-        <li><a href="#">Lijiang, Hiina</a></li>
-        <li><a href="#">Moskva, Venemaa</a></li>
-        <li><a href="#">Morocco</a></li>
+      <ul class="footer-links" id="contact">
+        <li><p>&copy; 03.09.2022</p></li>
+        <li><p>tel: 5742792123</p></li>
+        <li>
+          <span>Email:</span>
+          <a href="mailto:info@cookbook.ee">info@cookbook.ee</a>
+        </li>
       </ul>
 
       <div class="disclaimer">
         <p>
           Käesolev veebileht on loodud<br />
           <span>Veebilehtede loomine edasijõudnutele</span> <br />aine jaoks.
-          Tsau!
         </p>
       </div>
 
       <div class="footer-sm">
         <a href="#"><img src="assets/instagram-32.png" alt="instagram" /></a>
         <a href="#"><img src="assets/youtube-6-32.png" alt="youtube" /></a>
-        <a href="#"><img src="assets/pinterest-3-32.png" alt="pinterest" /></a>
-        <a href="#"><img src="assets/facebook-3-32.png" alt="facebook" /></a>
       </div>
     </footer>
   </body>
