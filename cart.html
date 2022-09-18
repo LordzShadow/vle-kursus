@@ -9,7 +9,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Avaleht</title>
+    <title>Ostukorv</title>
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -17,15 +17,16 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <!-- minu CSS -->
     <link rel="stylesheet" href="custom.css" />
   </head>
   <body>
-    <!-- päis --->
+    <!-- päis -->
     <header class="py-2">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12 my-3 text-center">
-            <a href="index.html"><img src="assets/logo2.png" width="50%" /></a>
+            <img src="assets/logo2.png" width="50%" />
           </div>
         </div>
       </div>
@@ -104,7 +105,7 @@
           </li>
         </ul>
         <!-- search -->
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline m-2 my-lg-0">
           <input
             class="form-control mr-sm-2"
             type="search"
@@ -118,16 +119,18 @@
           </button>
         </form>
       </div>
-      <button class="btn btn-dark my-2 my-sm-0" type="submit">
-        <a href="cart.html"
-          ><svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg>
-        </a>
-      </button>
+      <!-- cart -->
+      <a href="cart.html"
+        ><button class="btn btn-dark my-2 my-sm-0" type="submit">
+          <svg class="lnr lnr-cart">
+            <use xlink:href="#lnr-cart"></use>
+          </svg></button
+      ></a>
     </nav>
-    <!-- breadcrumb -->
     <section>
+      <!-- breadcrumb -->
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb bg-white my-2 ml-2">
+        <ol class="breadcrumb bg-white my-2">
           <li class="breadcrumb-item active" aria-current="page">
             <button class="btn btn-link my-2 my-sm-0 home-btn" type="submit">
               <a href="index.html">
@@ -137,87 +140,163 @@
               </a>
             </button>
           </li>
+          <li class="breadcrumb-item active">Ostukorv</li>
         </ol>
       </nav>
     </section>
-    <!-- jumbotron --->
-    <section>
-      <div class="jumbotron text-center">
-        <h4>
-          Kõik <a href="#">Koorijad ja maskid</a> allahinnatud alatest
-          <span class="text-danger">20%</span>-st!
-        </h4>
-      </div>
-    </section>
-    <!-- tooted --->
+    <!-- ostukorv -->
     <section>
       <div class="container">
-        <h2 class="h mb-3">TOP</h2>
         <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 1</a></h5>
-                <p class="text-muted card-text">15.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
+          <div class="col-lg-6 d-flex align-items-start flex-column">
+            <div class="mb-auto p-2"><h4>Ostukorvis on 1 toode</h4></div>
+            <div class="mb-auto p-2 row">
+              <div class="col-lg-6">
+                <img src="assets/soap.png" width="100%" />
               </div>
+              <div class="col-lg-6">
+                <p>15.99&#8364;</p>
+                <p>Toode 1</p>
+                <select class="form-control col-lg-5 form-sm" id="kogus">
+                  <option>0</option>
+                  <option selected="selected">1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+                <br />
+              </div>
+            </div>
+            <div class="p-2">
+              <p>Tarne: <span class="text-primary">tasuta</span></p>
+              <p>Kokku: <span class="text-primary">15.99&#8364;</span></p>
+            </div>
+            <div class="p-2 mx-auto">
+              <a href="kinnitus.html" class="btn btn-dark btn-lg mb-3">Maksa</a>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 2</a></h5>
-                <p class="text-muted card-text">12.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
+          <div class="col-lg-6">
+            <form>
+              <div class="form-row">
+                <div class="form-group col">
+                  <label for="firstname">Eesnimi</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstname"
+                    placeholder="Eesnimi"
+                  />
+                </div>
+                <div class="form-group col">
+                  <label for="lastname">Perenimi</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastname"
+                    placeholder="Perenimi"
+                  />
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 3</a></h5>
-                <p class="text-muted card-text">9.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                />
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 4</a></h5>
-                <p class="text-muted card-text">18.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="list-tab-tarne">Vali tarneviis:</label>
+                    <div class="list-group" id="list-tab-tarne" role="tablist">
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-dpd-list"
+                        data-toggle="list"
+                        href="#list-dpd"
+                        role="tab"
+                        aria-controls="dpd"
+                        >DPD</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-omniva-list"
+                        data-toggle="list"
+                        href="#list-omniva"
+                        role="tab"
+                        aria-controls="omniva"
+                        >Omniva</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-smartpost-list"
+                        data-toggle="list"
+                        href="#list-smartpost"
+                        role="tab"
+                        aria-controls="smartpost"
+                        >Smartpost</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-poodi-list"
+                        data-toggle="list"
+                        href="#list-poodi"
+                        role="tab"
+                        aria-controls="poodi"
+                        >Poodi</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="list-tab-makse">Vali makseviis:</label>
+                    <div class="list-group" id="list-tab-makse" role="tablist">
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-pank-list"
+                        data-toggle="list"
+                        href="#list-pank"
+                        role="tab"
+                        aria-controls="pank"
+                        >Pank</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-paypal-list"
+                        data-toggle="list"
+                        href="#list-paypal"
+                        role="tab"
+                        aria-controls="paypal"
+                        >Paypal</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-arve-list"
+                        data-toggle="list"
+                        href="#list-arve"
+                        role="tab"
+                        aria-controls="arve"
+                        >Arve</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-kohapeal-list"
+                        data-toggle="list"
+                        href="#list-kohapeal"
+                        role="tab"
+                        aria-controls="kohapeal"
+                        >Kohapeal (Poodi tellides)</a
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 5</a></h5>
-                <p class="text-muted card-text">1.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 6</a></h5>
-                <p class="text-muted card-text">5.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
-    <!-- jalus --->
+    <!-- jalus -->
     <footer class="bg-light">
       <div class="container-fluid">
         <div class="row">

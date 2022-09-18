@@ -119,8 +119,8 @@
         </form>
       </div>
       <button class="btn btn-dark my-2 my-sm-0" type="submit">
-        <a href="cart.html"
-          ><svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg>
+        <a href="cart.html">
+          <svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg>
         </a>
       </button>
     </nav>
@@ -137,80 +137,126 @@
               </a>
             </button>
           </li>
+          <li
+            class="breadcrumb-item active custom-breadcrumb"
+            aria-current="page"
+          >
+            Meist
+          </li>
         </ol>
       </nav>
     </section>
-    <!-- jumbotron --->
-    <section>
-      <div class="jumbotron text-center">
-        <h4>
-          Kõik <a href="#">Koorijad ja maskid</a> allahinnatud alatest
-          <span class="text-danger">20%</span>-st!
-        </h4>
-      </div>
-    </section>
-    <!-- tooted --->
+    <!-- meist -->
     <section>
       <div class="container">
-        <h2 class="h mb-3">TOP</h2>
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 1</a></h5>
-                <p class="text-muted card-text">15.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
+        <div id="accordion">
+          <div class="card">
+            <div
+              class="card-header"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+              id="headingOne"
+            >
+              <h5 class="mb-0">
+                <button class="btn btn-link">Ettevõttest</button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <div class="card-body d-flex justify-content-between">
+                <div class="col-md-6 text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate aliquam velit harum rem, itaque nihil doloribus
+                  natus dolores aliquid quos ad dolor praesentium debitis, iste
+                  tenetur odit eaque voluptatum nisi! Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Deleniti rem a, facilis
+                  quibusdam vero quidem. Eveniet aut illo culpa rerum aspernatur
+                  ad laudantium cum quaerat! Beatae laborum deleniti officiis
+                  illo. Lorem ipsum dolor sit amet consectetur, adipisicing
+                  elit. Magnam quos delectus et sit voluptates, amet doloremque
+                  facere consequatur magni quae blanditiis similique neque
+                  officia minus incidunt odio eius deleniti facilis!
+                </div>
+                <div>
+                  <img src="assets/meie.jpg" class="us-img" />
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 2</a></h5>
-                <p class="text-muted card-text">12.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
+          <div class="card">
+            <div
+              class="card-header"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+              id="headingTwo"
+            >
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed">Ajalugu</button>
+              </h5>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="card-body text-justify">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
+                unde sapiente ipsum alias, consectetur obcaecati eum nostrum.
+                Ipsa necessitatibus dolores, cum blanditiis, dolore magnam
+                voluptates delectus, assumenda quam harum fugit. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Tempora libero
+                voluptatem saepe modi! Consequatur iusto excepturi impedit
+                corrupti? Quae id rem recusandae magnam iusto cum temporibus,
+                vero quo in eos. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Quam aspernatur pariatur atque soluta beatae
+                quos, optio necessitatibus nemo! Nulla est molestiae repudiandae
+                beatae reprehenderit quae, architecto debitis aut dolorum
+                labore!
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 3</a></h5>
-                <p class="text-muted card-text">9.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
-              </div>
+          <div class="card">
+            <div
+              class="card-header"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+              id="headingThree"
+            >
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed">Tulevik</button>
+              </h5>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 4</a></h5>
-                <p class="text-muted card-text">18.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 5</a></h5>
-                <p class="text-muted card-text">1.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm border-0 h-100 text-center">
-              <a href="#"><img src="assets/soap.png" alt="" class="card-img-top" /></a>
-              <div class="card-body">
-                <h5><a href="#" class="text-dark">Toode 6</a></h5>
-                <p class="text-muted card-text">5.99&#8364;</p>
-                <a role="button" href="#" class="btn btn-outline-dark">Vaata</a>
+            <div
+              id="collapseThree"
+              class="collapse"
+              aria-labelledby="headingThree"
+              data-parent="#accordion"
+            >
+              <div class="card-body text-justify">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+                assumenda nam porro doloremque saepe non placeat, totam, beatae
+                eaque ut provident perspiciatis iste! Fuga sapiente temporibus,
+                vitae voluptatibus aliquid vero. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Corporis velit error, temporibus
+                similique dignissimos, necessitatibus vero iste qui cumque quo
+                veritatis ratione provident consectetur modi tempore neque
+                numquam debitis? Mollitia. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Praesentium facere consectetur
+                vitae, in distinctio dignissimos ipsa accusamus maiores eaque
+                totam. Omnis in sint perspiciatis facere. Quasi fugiat
+                consectetur sed dignissimos?
               </div>
             </div>
           </div>
