@@ -1,0 +1,8 @@
+== true, aga === false:
+    '2' ja 2
+    false ja '0'
+    null ja undefined
+    0 ja false
+    "" ja false
+    "" ja 0
+    [1, 2] ja '1,2'

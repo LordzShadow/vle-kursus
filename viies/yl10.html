@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Ülesanne 10</title> 
+
+</head>
+
+<body>
+
+<img id="aastaaeg" />
+
+
+<script type="text/javascript">
+
+const paeviKuus = {1: 31, 2: 29, 3:31, 4:30, 5:31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31};
+
+const sisend = window.prompt("Sisesta oma sünnipäev formaadis dd.mm:");
+const paev = Number(sisend.split('.')[0]);
+const kuu = Number(sisend.split('.')[1]);
+if (paeviKuus[kuu] && paev <= paeviKuus[kuu]) {
+    const aastaaeg = document.getElementById('aastaaeg');
+    switch (kuu) {
+        case 1:
+        case 2:
+        case 12:
+            console.log("Talv")
+            aastaaeg.src = "https://www.rd.com/wp-content/uploads/2019/12/shutterstock_1187147209-scaled.jpg?resize=1000";
+            break;
+        case 3:
+        case 4:
+        case 5:
+            aastaaeg.src = "https://resources.stuff.co.nz/content/dam/images/1/d/l/a/q/9/image.related.StuffLandscapeSixteenByNine.1240x700.1dje9z.png/1472081168610.jpg?format=pjpg&optimize=medium";
+            break;
+        case 6:
+        case 7:
+        case 8:
+            aastaaeg.src = "https://blog.continentalcurrency.ca/wp-content/uploads/2020/02/summer-vacation-922x615.jpg";
+            break;
+        case 9:
+        case 10:
+        case 11:
+            aastaaeg.src = "https://patch.com/img/cdn20/users/22921643/20170915/101445/styles/raw/public/processed_images/fall-1072821_340-1505484740-495.jpg?width=1000";
+            break;
+    }
+} else {
+    window.alert("Vale sisend!");
+}
+
+
+</script>
+
+</body>
+
+</html>
