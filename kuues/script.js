@@ -7,7 +7,7 @@
     let c = document.getElementById("clock");
 
     //setTimeout(updateClock, 2000);
-    setInterval(updateClock, 1000);
+    setInterval(updateClock, 200);
 
     function updateClock() {
       let date = new Date();
